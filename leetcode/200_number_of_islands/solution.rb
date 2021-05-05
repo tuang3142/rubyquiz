@@ -5,19 +5,19 @@ class Solution
     @m = @grid[0].length
   end
 
-  def self.solve(grid)
-    island_count = 0
+  def solve
+    count = 0
 
     (0..@n-1).each do |i|
       (0..@m-1).each do |j|
         next if @grid[i][j] == "0"
 
-        counter += 1
+        count += 1
         dfs(i, j)
       end
     end
 
-    counter
+    count
   end
 
   def dfs(i, j)
