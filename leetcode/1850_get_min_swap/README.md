@@ -1,4 +1,4 @@
-[Link to original problem.](https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/)
+[Link to original problem.](https://leetcode.com/problems/minimum-adjacent-swaps-to-reach-the-kth-smallest-number/discuss/1200296/ruby-next-permutation)
 
 **Idea**
 
