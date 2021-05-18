@@ -9,6 +9,8 @@ class PriorityQueue
   end
 
   def pop
+    return if @q.empty?
+
     swap(1, size - 1)
     top = @q.pop
     go_down(1)
