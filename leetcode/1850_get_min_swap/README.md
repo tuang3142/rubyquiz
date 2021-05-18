@@ -55,4 +55,14 @@ class Solution
     ans
   end
 end
+
+require "minitest/autorun"
+
+class Test < Minitest::Test
+  def test_general_cases
+    assert_equal 2, Solution.get_min_swap("5489355142", 4)
+    assert_equal 4, Solution.get_min_swap("11112", 4)
+    assert_equal 1, Solution.get_min_swap("00123", 1)
+  end
+end
 ```
