@@ -1,3 +1,7 @@
+[Link to original problem](https://leetcode.com/problems/closest-room/)
+
+[Thanks hiepit for the idea](https://leetcode.com/problems/closest-room/discuss/1185830/JavaPython-Sorting-queries-by-their-minSize-Clean-and-Concise)
+
 *This solution is implemented in python because binary search tree (BST) is not (yet) supported for ruby*
 
 ### Idea
