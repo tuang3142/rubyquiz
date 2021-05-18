@@ -1,1 +1,1 @@
-tbd
+This is a collection of my solutions to the puzzles/problems on leecode.com. I have been trying to select some of the more interesting problems and writing detailed explanations (for the code of solving puzzles usually hard to understand without context).
