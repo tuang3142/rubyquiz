@@ -1,6 +1,9 @@
+[Link to original problem](https://leetcode.com/problems/maximum-building-height/)
+
 **Idea**
 
 [Thanks votrubac for the original idea](https://leetcode.com/problems/maximum-building-height/discuss/1175269/C%2B%2B-with-picture-2-passes)
+
 Going from left to right, let's find the maximum height `h` between two limits: `h1` and `h2` which are indexed `i` and `j`.
 To get the highest result from `h1`, we keep increasing the height by 1 from `i` to `j`. At best, `h = h1 + (j - i)`.
 If `h <= h2`: decrease h2 to meet h (`h2 = h`) since it's no help keeping it higher.

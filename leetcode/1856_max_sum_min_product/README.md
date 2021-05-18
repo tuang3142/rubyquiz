@@ -1,4 +1,4 @@
-**[Link to the problem](https://leetcode.com/problems/maximum-subarray-min-product/discuss/1199300/ruby-Using-stack-and-accumulated-sum)
+**[Link o the problem](https://leetcode.com/problems/maximum-subarray-min-product/discuss/1199300/ruby-Using-stack-and-accumulated-sum)
 
 *[Thanks hiepit for the original solution.](https://leetcode.com/problems/maximum-subarray-min-product/discuss/1198718/JavaPython-Stack-keeps-index-of-elements-less-than-numsi-O(N)) I am meerly providing my understanding and the ruby code.*
 
