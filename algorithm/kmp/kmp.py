@@ -16,7 +16,7 @@ class Solution:
     def build_lps(self, pattern):
         n = len(pattern)
         lps = [0] * n
-        i, j = 1, 0 # skip first position since its always 0
+        i, j = 1, 0                      # skip first position since its always 0
         while i < n:
             if pattern[j] == pattern[i]: # if prefix match suffix
                 j += 1                   # increase prefix length
@@ -24,7 +24,7 @@ class Solution:
                 i += 1                   # and move on
             else:                        # else
                 if j > 0:
-                    j = lps[j - 1]   # try shorter prefix
+                    j = lps[j - 1]       # try shorter prefix
                 else:
                     i += 1               # move on cus no prefix match
         return lps
