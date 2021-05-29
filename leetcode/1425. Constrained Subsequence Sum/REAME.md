@@ -1,4 +1,14 @@
-# idea
+### tl;dr
+[Link to problem statement.](https://leetcode.com/problems/constrained-subsequence-sum/)
 
 
-use heap to smoothen the shit
+### Complexity
+
+with `n = `:
+- time: `O()`
+- space: `O()`
+
+
+### Idea
+
+
