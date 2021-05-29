@@ -2,7 +2,7 @@ import unittest
 from solution import Solution
 
 class Test(unittest.TestCase):
-    def test_regular_cases(self):
+    def test_general_cases(self):
         A = [1,3,-1,-3,5,3,6,7]
         k = 3
         self.assertEqual(Solution().maxSlidingWindow(A, k), [3,3,5,5,6,7])

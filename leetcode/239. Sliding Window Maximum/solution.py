@@ -1,5 +1,4 @@
 from collections import deque
-from pdb import set_trace
 
 class Solution:
     def maxSlidingWindow(self, A, k):
@@ -15,8 +14,3 @@ class Solution:
                 qu.popleft()
             ret.append(A[qu[0]])
         return ret
-
-A = [7, 2, 4]
-k = 2
-
-print(Solution().maxSlidingWindow(A, k))
