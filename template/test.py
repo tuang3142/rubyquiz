@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class Test(unittest.TestCase):
     # example cases, can be solved by hand, given in statement
     def test_general(self):

@@ -6,11 +6,11 @@ Given an integer array `A` and an integer `k`, return the maximum sum of a non-e
 
 ### Idea
 
-For each number, check for the largest sum previously calculated (using dynamic programming) within the window size. To get the largest previous sum, several methods can be used. Then "k sized window" screams out [monotonic queue](https://medium.com/algorithms-and-leetcode/monotonic-queue-explained-with-leetcode-problems-7db7c530c1d6) which is the best solution, but acceptable others include priority queue and balanced binary search tree.
+For each number, check for the largest sum previously calculated within the window size. The sum is saved for future comparation (dynamic programming here). To get the largest value quickly, several methods can be used. Then "k sized window" screams out [monotonic queue](https://medium.com/algorithms-and-leetcode/monotonic-queue-explained-with-leetcode-problems-7db7c530c1d6) which is the best solution, but acceptable others include priority queue and balanced binary search tree.
 
 
 ### Complexity
 
 with `n = len(A)`:
-- time: `O(n)`
+- time: `O(n)` (`O(log(n))` for priority queue and bst)
 - space: `O(k)`
