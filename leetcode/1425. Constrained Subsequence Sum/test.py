@@ -1,16 +1,24 @@
-import heapq
-import random
+import unittest
+from solution import Solution
 
-n = 100
-h = []
+class Test(unittest.TestCase):
+    def test_general(self):
+        A, k = [10,2,-10,5,20], 2
+        self.assertEqual(Solution().constrainedSubsetSum(A, k), 37)
 
-for _ in range(n):
-    heapq.heappush(h, random.randrange(n))
+        A, k = [10,-2,-10,-5,20], 2
+        self.assertEqual(Solution().constrainedSubsetSum(A, k), 23)
 
-for _ in range(n):
-    heapq.heappush(h, random.randrange(n))
-    if h[0] != heapq.heappop(h):
-        print("break")
+        A, k = [1, 2, 3], 1
+        self.assertEqual(Solution().constrainedSubsetSum(A, k), 6)
 
-print(h)
-print("true")
+    def test_too_bad_but_have_to_choose(self):
+        A, k = [-1, -2, -3], 2
+        self.assertEqual(Solution().constrainedSubsetSum(A, k), -1)
+
+    def test_k_equal_len_A(self):
+        A, k = [10,-2,-10,-5,20], 5
+        self.assertEqual(Solution().constrainedSubsetSum(A, k), 30)
+
+if __name__ == '__main__':
+    unittest.main()
