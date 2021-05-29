@@ -1,8 +1,8 @@
 # Why
 
-This is my take on the [leecode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python (over ruby, which I use professionally) because of the wide range of supported python libraries for solving algorithmic problems.
+This is my take on the [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python (over ruby, which I use professionally) because of the wide range of supported python libraries for solving algorithmic problems.
 
-Each problem comes with an explanation of what it is, how to solve it, and test suites. I keep it brief as it takes great effort to write an "easy-to-understand" solution and even greater effort to understand it if readers don't attempt to solve problems. Again, the punch line is only "clean and test-driven" code.
+Each problem comes with an explanation of what it is, how to solve it, and test suites. I keep it brief as it takes great effort to write an "easy-to-understand" solution and even greater effort to understand it. Again, the punch line is only "clean and test-driven" code.
 
 
 # Examples
