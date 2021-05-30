@@ -5,11 +5,11 @@ Given the root of a binary tree `root` and the head of a linked list `head`. Che
 
 ### Idea
 
-This solution is similar to finding a pattern in a string. The brute force solution is acceptable. However, just like finding a string pattern, we can use the KMP algorithm to produce a faster solution. The idea is when checking a node, we don't need to start all over from the patern beginning.
+This problem is similar to finding a pattern in a string. The brute force approach is acceptable. However, just like finding a string pattern, we can use the KMP algorithm to produce a faster solution. The idea is when checking if a tree node is in the list, we don't need to start all over from beginning of the list.
 
 
 ### Complexity
 
 with `n = depth_of_tree` and `k = length_of_link_list`:
 - time: `O(n + k)`
-- space: `O(k)` (we need to transform the linked list into and k-sized array, which makes me wonder why they gave the list at the first place but well, I don't hate the player)
+- space: `O(k)` (Because we need to transform the linked list into and k-sized array, which makes me wonder why they gave the list at the first place but well. Hate the game dont hate the player)
