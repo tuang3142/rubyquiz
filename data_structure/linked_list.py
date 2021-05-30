@@ -3,8 +3,8 @@ class LinkedList:
         self.val = val
         self.next = next_node
 
-    @classmethod
-    def convert_to_linked_list(A):
+    @staticmethod
+    def convert_array(A):
         head = LinkedList()
         node = head
         for i, v in enumerate(A):
