@@ -11,5 +11,3 @@
 with `n = `:
 - time: `O()`
 - space: `O()`
-
-

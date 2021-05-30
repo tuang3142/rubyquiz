@@ -1,6 +1,6 @@
 # Why
 
-This is my take on [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python (over ruby, which I use professionally) because of the wide range of supported python libraries for solving algorithmic problems.
+This is my take on [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python over ruby, which I use professionally, because of the wider range of supported python libraries for solving algorithmic problems.
 
 Each problem comes with an explanation of what it is, how to solve it, and test suites. I keep it brief as it takes great effort to write an "easy-to-understand" solution and even greater effort to understand it. Again, the punch line is only "clean and test-driven" code.
 
@@ -29,7 +29,7 @@ Window position                Max
 
 ### Idea
 
-Use [monotonic queue](http://www.algorithmsandme.com/monotonic-queue/). Basically, create a queue and make sure the order is decreasing so that the first number in q is the largest.
+This problem is more commonly known as [monotonic queue](http://www.algorithmsandme.com/monotonic-queue/). Basically, create a queue and make sure the order is decreasing so that the first number in q is the largest.
 
 ### Complexity
 
@@ -58,4 +58,8 @@ class Solution:
         return ret
 ```
 
-## two more
+
+## 1367. Linked List in Binary Tree
+tbd
+
+## 1 more
