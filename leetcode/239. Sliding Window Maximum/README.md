@@ -1,6 +1,6 @@
 ### tl;dr
 
-[Link to the problems statement.](https://leetcode.com/problems/sliding-window-maximum/)
+[Link to the problems statement.](https://leetcode.com/problems/sliding-window-maximum/)  
 Given an array of integers `A` and a window of size `k`, return the largest number in the window when moving it from left to right one index at a time.
 
 
