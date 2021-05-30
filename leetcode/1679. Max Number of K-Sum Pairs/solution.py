@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 class Solution:
     def maxOperations(self, nums, s):
         counter = Counter(nums)
@@ -15,8 +16,6 @@ class Solution:
             counter[k] -= to_add
             counter[s - k] -= to_add
             ret += to_add
+
         return ret
 
-nums = [1, 2, 3, 6, 3, 4, 5]
-k = 6
-print(Solution().maxOperations(nums, k))
