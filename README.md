@@ -1,7 +1,7 @@
 # Why
 
-This is my take on [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python over ruby, which I use professionally, because of the wider range of supported python libraries for solving algorithmic problems.  
-Each problem comes with an explanation of what it is, how to solve it, and test suites. I keep it brief as it takes great effort to write an "easy-to-understand" solution and even greater effort to understand it. Again, the punch line is only "clean and test-driven" code.
+This repo contains my solutions for [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python over ruby (which I use professionally) because python supports a wider range of libraries for solving algorithmic problems.  
+Each problem comes with an explanation of what it is, how to solve it, and test suites. I'll keep them brief as it takes great effort to write an "easy-to-understand" explanation and even greater effort to understand it. Again, the punch line is only "clean and test-driven" code.
 
 # Examples
 
@@ -28,7 +28,7 @@ Window position                Max
 
 ### Idea
 
-This problem is more commonly known as [monotonic queue](http://www.algorithmsandme.com/monotonic-queue/). The idea is to create a queue and make sure the order is decreasing so that the first number in q is the largest.
+This problem is more commonly known as [monotonic queue](http://www.algorithmsandme.com/monotonic-queue/). The idea is to create a queue and make sure the order is decreasing so that the first number in q is always the largest.
 
 ### Complexity
 
@@ -96,23 +96,23 @@ if __name__ == '__main__':
 ### tl;dr
 
 [Link to the problem statement.](https://leetcode.com/problems/linked-list-in-binary-tree/)  
-Given the root of a binary tree `root` and the head of a linked list `head`. Check if all the elements in the linked list starting from the head correspond to some downward path connected in the binary tree.
+Given the root of a binary tree `root` and the head of a linked list `head`, check if all the nodes in the linked list starting from the head correspond to some downward path connected in the tree.
 ```
 Input: head = [4,2,8], root = [1,4,4,null,2,2,null,1,null,6,8,null,null,null,null,1,3]
 Output: true
-Explanation: Nodes in blue form a subpath in the binary Tree.
+Explanation: blue nodes form a path in the tree that is "equal" to the linked list.
 ```
 ![visualized tree](https://assets.leetcode.com/uploads/2020/02/12/sample_1_1720.png "image from leetcode.com")
 ### Idea
 
-This problem is similar to finding a pattern in a string. The brute force approach is acceptable. However, just like finding a string pattern, we can use the KMP algorithm to produce a faster solution. The idea is when checking if a tree node is in the list, we don't need to start all over from beginning of the list.
+This problem is similar to finding a pattern in a string. The brute force approach is acceptable. However, we can use [KMP algorithm](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm) to produce a much faster solution. The idea is when checking if a tree node is in the linked list, we don't need to start all over from beginning of the list.
 
 
 ### Complexity
 
-with `n = depth_of_tree` and `k = length_of_link_list`:
+with `n = number_of_tree_nodes` and `k = number_of_list_nodes`:
 - time: `O(n + k)`
-- space: `O(k)` (because we need to transform the linked list into and k-sized array, which makes me wonder why they gave the list at the first place but well, hate the game dont hate the player)
+- space: `O(k)` (because we need to transform the list into an k-sized array, which makes me wonder why they gave the list at the first place but well, hate the game dont hate the player)
 
 ### Code
 
