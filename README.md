@@ -112,7 +112,7 @@ This problem is similar to finding a pattern in a string. The brute force approa
 
 with `n = number_of_tree_nodes` and `k = number_of_list_nodes`:
 - time: `O(n + k)`
-- space: `O(k)` (because we need to transform the list into an k-sized array, which makes me wonder why they gave the list at the first place but well, hate the game dont hate the player)
+- space: `O(k)` (because we need to transform the list into a k-sized array, which makes me wonder why they gave the list at the first place but well, hate the game dont hate the player)
 
 ### Code
 
