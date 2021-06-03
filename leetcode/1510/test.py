@@ -3,16 +3,17 @@ from solution import Solution
 
 
 class Test(unittest.TestCase):
-    # example cases, can be solved by hand, given in statement
+    def setUp(self):
+        self.winnerSquareGame = Solution().winnerSquareGame
+
     def test_general(self):
+        self.assertTrue(self.winnerSquareGame(1))
+        self.assertFalse(self.winnerSquareGame(2))
+        self.assertFalse(self.winnerSquareGame(7))
+        self.assertFalse(self.winnerSquareGame(17))
 
-    # really small/large cases, usually 0 or n
-    # def test_edge(self):
-
-    # def test_no_solution(self):
-
-    # not edge case, but could fail if not handle properly
-    # def test_tricky(self):
+    def test_largest_n(self):
+        self.assertTrue(self.winnerSquareGame(100000))
 
 
 if __name__ == '__main__':
