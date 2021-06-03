@@ -1,3 +1,3 @@
 class Solution:
     def foo(self):
-        return
+        return 0

@@ -3,8 +3,12 @@ from solution import Solution
 
 
 class Test(unittest.TestCase):
+    def setUp(self):
+        self.foo = Solution().foo
+
     # example cases, can be solved by hand, given in statement
     def test_general(self):
+        self.assertEqual(self.foo(), 0)
 
     # really small/large cases, usually 0 or n
     # def test_edge(self):
