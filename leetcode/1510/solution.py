@@ -3,8 +3,6 @@ class Solution:
         def sqr(n): return int(n ** 0.5)
         def square(n): return sqr(n) ** 2 == n
 
-        # true if alice wins going first, else false
-        # setup: going first player wins if the number is square already
         dp = [[True, False] if square(i) else [-1, -1] for i in range(n + 1)]
         for i in range(n + 1):
             for p in range(2):
