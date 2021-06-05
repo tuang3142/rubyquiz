@@ -14,7 +14,8 @@ class Solution:
         for target in range(2, 2 * lim + 1):
             increase_both = bisect_left(maxs, target - lim)
             decrease_both = n - bisect_left(mins, target)
-            equal = counter[target]
-            ret = min(ret, n - equal + increase_both + decrease_both)
+            no_change = counter[target]
+            change_one = n - increase_both - decrease_both - no_change
+            ret = min(ret, change_one + increase_both * 2 + decrease_both * 2)
 
         return ret
