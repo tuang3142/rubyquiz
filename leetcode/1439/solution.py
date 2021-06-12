@@ -3,23 +3,28 @@ from heapq import heappop as pop
 from heapq import heapify
 
 class Solution:
-    def kthSmallest(self, mat, k):
-        M = [sorted(row) for row in mat]
+    def kthSmallest(self, M, k):
         n, m = len(M), len(M[0])
-        ret = sum([M[i][0] for i in range(n)])
-        if m == 1: return ret
+        init_j = [0] * n
+        init_sum = sum([i[0] for i in M])
+        qu = [[init_sum, init_j]]
+        seen = [self.make_key(init_j)]
 
-        qu = [(M[i][1] - M[i][0], i) for i in range(n)]
-        heapify(qu)
-        current_index = [1] * n
         for _ in range(1, k):
-            # print(qu)
-            diff, i = pop(qu)
-            ret += diff
-            print(i, current_index[i])
-            current_index[i] += 1
-            j = current_index[i]
-            if j == m: continue
-            diff = M[i][j] - M[i][j-1]
-            push(qu, (diff, i))
+            now_sum, now_id = pop(qu)
+            for i in range(n):
+                next_id = [v for v in now_id]
+                next_id[i] += 1
+                key = self.make_key(next_id)
+                if next_id[i] >= m or key in seen:
+                    continue
+                seen.append(key)
+                j = next_id[i]
+                next_sum = now_sum + M[i][j] - M[i][j-1]
+                push(qu, [next_sum, next_id])
+
+        ret, _ = pop(qu)
         return ret
+
+    def make_key(self, arr):
+        return ",".join([str(v) for v in arr])
