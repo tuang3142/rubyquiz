@@ -3,6 +3,10 @@
 This repo contains my solutions for [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python over ruby (which I use professionally) because python supports a wider range of libraries for solving algorithmic problems.  
 Each problem comes with an explanation of what it is, how to solve it, and test suites. I'll keep them brief as it takes great effort to write an "easy-to-understand" explanation and even greater effort to understand it. Again, the punch line is only "clean and test-driven" code.
 
+# How to test
+
+Using Vim (which you should) with the `vim-test` plugin, open a test file and run `:TestFile`. At the moment, I'm only writing python test.
+
 # Examples
 
 ## 239. Sliding Window Maximum
