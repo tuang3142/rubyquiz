@@ -8,6 +8,6 @@
 
 ### Complexity
 
-with `n = `:
+let `n = `:
 - time: `O()`
 - space: `O()`
