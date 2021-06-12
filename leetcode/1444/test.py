@@ -17,13 +17,12 @@ class Test(unittest.TestCase):
         self.assertEqual(self.ways(pizza, k), 1)
 
 
-    # really small/large cases, usually 0 or n
-    # def test_edge(self):
+    def test_k_equal_pizza_size(self):
+        pizza, k = ["A..","AAA","..."], 3
+        self.assertEqual(self.ways(pizza, k), 3)
 
-    # def test_no_solution(self):
-
-    # not edge case, but could fail if not handle properly
-    # def test_tricky(self):
+        pizza, k = ["AAA","AAA","AAA"], 3
+        self.assertEqual(self.ways(pizza, k), 10)
 
 
 if __name__ == '__main__':

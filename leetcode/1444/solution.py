@@ -1,43 +1,29 @@
 class Solution:
-    def ways(self, pizza, k):
-        self.grid = [[0 if c == '.' else 1 for c in row] for row in pizza]
-        self.row, self.col = len(pizza), len(pizza[0])
-        self.dp = {}
-        self.sum_grid = None
+    def ways(self, grid, k):
+        n, m = len(grid), len(grid[0])
+        N, M = n + 1, m + 1
+        sum_grid = [[0] * M for _ in range(N)]
+        for i in range(1, N):
+            for j in range(1, M):
+                sum_grid[i][j] = sum_grid[i-1][j] + sum_grid[i][j-1]\
+                               - sum_grid[i-1][j-1] + int(grid[i-1][j-1] == 'A')
 
-        return self.dfs(0, 0, k)
+        dp = {}
+        def count(a, b, c, d):
+            return sum_grid[c][d] - sum_grid[a][d]\
+                 - sum_grid[c][b] + sum_grid[a][b]
+        def dfs(a, b, k):
+            if (a, b, k) in dp: return dp[(a, b, k)]
+            if k == 1 and count(a, b, n, m) >= 1: return 1
 
-    def dfs(self, a, b, k):
-        if (a, b, k) in self.dp: return self.dp[(a, b, k)]
-        if k == 1 and self.count(a, b, self.row, self.col) >= 1: return 1
-        if k == 0 or self.count(a, b, self.row, self.col) < k: return 0
+            ret, mod = 0, int(1e9 + 7)
+            for i in range(a + 1, n):
+                if count(a, b, i, m) >= 1:
+                    ret = (ret + dfs(i, b, k - 1)) % mod
+            for j in range(b + 1, m):
+                if count(a, b, n, j) >= 1:
+                    ret = (ret + dfs(a, j, k - 1)) % mod
+            dp[(a, b, k)] = ret
+            return ret
 
-        mod = int(1e9) + 7
-        ret = 0
-        for i in range(a + 1, self.row):
-            if self.count(a, b, i, self.col) > 0:
-                ret = (ret + self.dfs(i, b, k - 1)) % mod
-        for i in range(b + 1, self.col):
-            if self.count(a, b, self.row, i) > 0:
-                ret = (ret + self.dfs(a, i, k - 1)) % mod
-
-        self.dp[(a, b, k)] = ret
-        return ret
-
-    def count(self, a, b, c, d):
-        if a == c or b == d: return 0
-        a, b = a + 1, b + 1
-        if not self.sum_grid:
-            self.sum_grid = self.init_sum_grid(self.grid)
-        return self.sum_grid[c][d] - self.sum_grid[c][b-1] \
-             - self.sum_grid[a-1][d] + self.sum_grid[a-1][b-1]
-
-    def init_sum_grid(self, grid):
-        n, m = len(grid) + 1, len(grid[0]) + 1
-        sum_grid = [[0] * m for _ in range(n)]
-        for i in range(1, n):
-            for j in range(1, m):
-                sum_grid[i][j] = grid[i-1][j-1]
-                sum_grid[i][j] += sum_grid[i-1][j] + sum_grid[i][j-1] - sum_grid[i-1][j-1]
-
-        return sum_grid
+        return dfs(0, 0, k)
