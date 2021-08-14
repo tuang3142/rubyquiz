@@ -1,7 +1,7 @@
 # Why
 
-This repo contains my solutions for [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean and test-driven code. I primarily use python over ruby (which I use professionally) because python supports a wider range of libraries for solving algorithmic problems.  
-Each solution comes with an explanation and test suites. I'll keep them brief as it takes great effort to write an "easy-to-understand" explanation and an equal effort to understand it. Again, the punch line is only "clean and test-driven" code.
+This repo contains my solutions for [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean code with explanation and complexity analysis. I primarily use Python over Ruby (which I use professionally) because Python supports a wider range of libraries for solving algorithmic problems.  
+Each solution comes with an explanation and test suites. I'll keep them brief as it takes great effort to write an "easy-to-understand" explanation and an equal effort to understand it. Again, the punch line is only short and clean code.
 
 # How to test
 
