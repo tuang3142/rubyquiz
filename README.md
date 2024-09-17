@@ -1,3 +1,9 @@
+# the purpose is to showcase tdd & clean code
+
+tdd on ds and algorithms
+implement them from sratch 1 hour a day
+the rest dont matter
+
 # Why
 
 This repo contains my solutions for [leetcode](http://leetcode.com/) problems. Occasionally, I'll write algorithms and data structures from scratch. The purpose is to practice and showcase clean code with explanation and complexity analysis. I primarily use Python over Ruby (which I use professionally) because Python supports a wider range of libraries for solving algorithmic problems.  
